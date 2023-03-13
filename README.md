@@ -1,6 +1,6 @@
 # Job Scheuler Service
 
-This solution proposes using C#,.NET Core6 to build a web API that allows clients to enqueue an array of numbers to be sorted in the background and query the state of any previously enqueued job. The solution includes a background job processing system, a message queue, an in-memory data store, logging functionality, and a suite of unit tests. The solution is self-contained, and all data can be stored in memory for the sake of simplicity. No external infrastructure is needed to run the solution.
+This solution proposes using C#,.NET Core6 to build a web API that allows clients to enqueue an array of numbers to be sorted in the background and query the state of any previously enqueued job. The solution includes a background job processing system(using hangfire), a message queue, an in-memory data store, logging functionality, and a suite of unit tests. The solution is self-contained, and all data can be stored in memory for the sake of simplicity. No external infrastructure is needed to run the solution.
 
 ## Concepts
 
@@ -24,6 +24,10 @@ The JobScheduler API Contain three Endpoints with different functonalities:
 'GET /jobs' - Retrieve an overview of all jobs (both pending and completed).
 
 'GET /jobs/{id}' - Retrieve a specific job by its ID, including the output (sorted array) if the job has completed.
+
+## Dashboard
+
+you can monitor the jobs processing in a dashboard  with url :~/hangfire 
 
 
 ## Step to run
